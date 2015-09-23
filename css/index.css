@@ -984,6 +984,7 @@ textarea {
 
 .activity .title {
     border-top: 1px solid #333333;
+    overflow: hidden;
 }
 
 .activity .title h1 {
@@ -999,11 +1000,108 @@ textarea {
 
 .activity-nav {
     float: left;
+    margin-left: 5px;
 }
 
 .activity-nav li {
     font-size: 16px;
+    font-weight: bold;
     line-height: 40px;
     float: left;
     padding: 5px 20px;
 }
+.activity-nav li a:hover{
+    color: #289ee8;
+}
+
+/* 活动主体内容 */
+
+.activity-content{
+    padding:0  30px;
+    overflow: hidden;
+}
+.content-house{
+
+}
+.content-pane1{
+    float: left;
+    width: 280px;
+    height: 400px;
+}
+.content-hd{
+    width: 280px;
+    height: 25px;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 25px;
+    padding: 10px 0;
+    border-bottom: 1px dashed #ececec;
+}
+.content-hd a{
+    color: #289ee8;
+}
+
+.content-bd {
+    margin-top: 15px;
+
+}
+.content-bd img{
+    width: 280px;
+    height: 335px;
+}
+
+.content-pane2{
+    float: left;
+    margin-left: 35px;
+}
+
+.content-list{
+    float: left;
+    margin-left: 35px;
+    width: 370px;
+}
+.content-list .content-hd{
+    width: 370px;
+}
+.content-list .content-hd span{
+
+    color: #999999;
+}
+.content-list .content-hd em{
+    font-weight: bold;
+    margin-right: 20px;
+    color:#e8284c ;
+}
+.content-list .content-bd li{
+    font-size: 16px;
+    height: 30px;
+    width: 370px;
+    margin: 5px 0;
+}
+.content-list .content-bd p {
+    width: 370px;
+    height: 25px;
+    overflow: hidden;
+}
+.content-list .content-bd .list-active {
+    height: 130px;
+}
+.content-list .content-bd i{
+    margin: 9px 8px 0 0;
+    width: 5px;
+    height: 5px;
+    border-radius: 5px;
+    background: #cccccc;
+    float: left;
+}
+.content-list .content-bd img{
+    width: 0;
+    height: 0;
+}
+.content-list .content-bd .list-active img{
+    margin: 5px 0;
+    width: 370px;
+    height: 100px;
+}
+
+
