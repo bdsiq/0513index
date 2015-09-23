@@ -50,6 +50,10 @@ a {
 a:hover {
     text-decoration: none;
     color: #e8284c;
+
+    -webkit-transition: all .12s ease;
+    -moz-transition: all .12s ease;
+    transition: all .12s ease;
 }
 
 sup {
@@ -89,7 +93,7 @@ strong, em, i {
 }
 
 body {
-    color: #121212;
+    color: #333;
     background: #fff;
 }
 
@@ -124,6 +128,25 @@ textarea {
 
 .cl {
     clear: both;
+}
+
+.notice a {
+    color: #e8284c;
+}
+
+/* 广告*/
+.ad1 img {
+    float: left;
+    width: 272px;
+    height: 70px;
+    margin: 10px 0 8px 0;
+}
+
+.ad2 img {
+    float: left;
+    width: 272px;
+    height: 78px;
+    margin: 10px 0 2px 0;
 }
 
 /* Your module */
@@ -232,17 +255,17 @@ textarea {
     width: 50px;
     height: 50px;
     border-radius: 12px;
-    -webkit-transition: all .12s ease;
-    -moz-transition: all .12s ease;
-    transition: all .12s ease;
+    -webkit-transition: all .12s ease-out;
+    -moz-transition: all .12s ease-out;
+    transition: all .12s ease-out;
 }
 
 .toptar-nav .menu .app-list .link-item .app-name {
     display: block;
     padding-top: 4px;
-    -webkit-transition: all .12s ease;
-    -moz-transition: all .12s ease;
-    transition: all .12s ease;
+    -webkit-transition: all .12s ease-out;
+    -moz-transition: all .12s ease-out;
+    transition: all .12s ease-out;
 }
 
 .toptar-nav .menu .app-list .link-item1 .icon {
@@ -477,9 +500,9 @@ textarea {
 
 .navhover {
     background: #2382bd;
-    -webkit-transition: all .12s ease;
-    -moz-transition: all .12s ease;
-    transition: all .12s ease;
+    -webkit-transition: all .5s ease-out;
+    -moz-transition: all .5s ease-out;
+    transition: all .5s ease-out;
 }
 
 .tab_holder .phone {
@@ -617,12 +640,15 @@ textarea {
 }
 
 .slider-bd {
-    overflow: hidden;
-}
-
-.slider-bd {
     height: 412px;
 
+    overflow: hidden;
+
+}
+
+.slider-bd img {
+    width: 320px;
+    height: 412px;
 }
 
 /* 主要-左侧-爆料 */
@@ -649,13 +675,13 @@ textarea {
     color: #289ee8;
 }
 
-.baoliao-hd a {
+.link-more {
     line-height: 30px;
     font-size: 12px;
     color: #999;
 }
 
-.baoliao-hd a i {
+.link-more i {
     margin-top: 10px;
     margin-left: 4px;
     float: right;
@@ -776,9 +802,11 @@ textarea {
 }
 
 .top-news .news-list p {
-    color: #666666;
+
     width: 420px;
     height: 40px;
+    font-size: 12px;
+    color: #666666;
     overflow: hidden;
 }
 
@@ -795,7 +823,7 @@ textarea {
 .top-news .pk {
     width: 420px;
     height: 128px;
-    background: #cccccc;
+    border: 1px solid #cccccc;
 }
 
 /* 头部重要内容右侧 */
@@ -947,15 +975,6 @@ textarea {
     overflow: hidden;
 }
 
-/* 广告*/
-.ad1 {
-    float: left;
-    width: 272px;
-    height: 70px;
-    margin: 10px 0 8px 0;
-    background: url(../images/image2.jpg);
-}
-
 /*  社交 */
 .social-list li {
     width: 68px;
@@ -979,16 +998,18 @@ textarea {
 
 /* 活动 */
 .activity {
-    height: 1000px;
+    margin-bottom: 20px;
 }
 
-.activity .title {
+.act-title {
     border-top: 1px solid #333333;
     overflow: hidden;
 }
 
-.activity .title h1 {
+.act-title h1 {
     float: left;
+    height: 40px;
+    line-height: 40px;
     margin-top: -1px;
     color: #289ee8;
     text-align: center;
@@ -1008,36 +1029,48 @@ textarea {
     font-weight: bold;
     line-height: 40px;
     float: left;
-    padding: 5px 20px;
+    padding: 5px 20px 0;
 }
-.activity-nav li a:hover{
+
+.activity-nav li a:hover {
     color: #289ee8;
+}
+
+.coupon-line {
+    width: 60px;
+    height: 2px;
+    background: #289ee8;
+    margin-left: 130px;
 }
 
 /* 活动主体内容 */
 
-.activity-content{
-    padding:0  30px;
+.activity-content {
+    padding: 0 30px;
+    border: 1px solid #ececec;
     overflow: hidden;
 }
-.content-house{
+
+.content-house {
 
 }
-.content-pane1{
+
+.content-pane1 {
     float: left;
     width: 280px;
-    height: 400px;
+    height: 410px;
 }
-.content-hd{
+
+.content-hd {
     width: 280px;
     height: 25px;
     font-size: 18px;
-    font-weight: bold;
     line-height: 25px;
     padding: 10px 0;
     border-bottom: 1px dashed #ececec;
 }
-.content-hd a{
+
+.content-hd a {
     color: #289ee8;
 }
 
@@ -1045,63 +1078,303 @@ textarea {
     margin-top: 15px;
 
 }
-.content-bd img{
+
+.content-bd img {
     width: 280px;
     height: 335px;
 }
 
-.content-pane2{
+.content-pane2 {
     float: left;
     margin-left: 35px;
 }
 
-.content-list{
+.content-list {
     float: left;
     margin-left: 35px;
     width: 370px;
 }
-.content-list .content-hd{
+
+.content-list .content-hd {
     width: 370px;
 }
-.content-list .content-hd span{
+
+.content-list .content-hd span {
 
     color: #999999;
 }
-.content-list .content-hd em{
+
+.content-list .content-hd em {
     font-weight: bold;
     margin-right: 20px;
-    color:#e8284c ;
+    color: #e8284c;
 }
-.content-list .content-bd li{
+
+.content-list .content-bd li {
     font-size: 16px;
     height: 30px;
     width: 370px;
     margin: 5px 0;
 }
+
+.content-list .content-bd img {
+    display: none;
+}
+
 .content-list .content-bd p {
-    width: 370px;
+
     height: 25px;
     overflow: hidden;
 }
+
 .content-list .content-bd .list-active {
-    height: 130px;
+    height: 165px;
 }
-.content-list .content-bd i{
-    margin: 9px 8px 0 0;
+
+.content-list .content-bd .list-active img {
+    display: block;
+}
+
+.content-list .content-bd i {
+    margin: 11px 8px 0 0;
     width: 5px;
     height: 5px;
     border-radius: 5px;
     background: #cccccc;
     float: left;
 }
-.content-list .content-bd img{
+
+.content-list .content-bd img {
     width: 0;
     height: 0;
 }
-.content-list .content-bd .list-active img{
+
+.content-list .content-bd .list-active img {
     margin: 5px 0;
     width: 370px;
-    height: 100px;
+    height: 135px;
+}
+
+/* 房产 */
+.buidings {
+    overflow: hidden;
+}
+
+.floor-pane1 {
+    margin-top: 3px;
+    width: 765px;
+}
+
+.floor-bgimage {
+    float: left;
+    overflow: hidden;
+}
+
+.floor-bgimage img {
+    width: 320px;
+    height: 200px;
+}
+
+.floor-news {
+    width: 420px;
+    float: left;
+    margin-left: 25px;
+}
+
+.floor-news p {
+    height: 40px;
+    margin-bottom: 10px;
+    padding: 5px;
+    font-size: 14px;
+    color: #666;
+    overflow: hidden;
+}
+
+.news-title {
+    margin-top: 3px;
+    text-align: center;
+    font-size: 22px;
+}
+
+.news-title a {
+    color: #289ee8;
+}
+
+.news-title a:hover {
+    text-decoration: underline;
+}
+
+.floor-imgshow {
+    position: relative;
+    width: 765px;
+    float: left;
+    margin-top: 10px;
+
+    overflow: hidden;
+}
+
+.imgshow-title {
+    overflow: hidden;
+}
+
+.imgshow-title h3 {
+    float: left;
+    font-size: 16px;
+}
+
+.imgshow-list {
+    width: 765px;
+    height: 125px;
+    padding: 5px 0;
+    overflow: hidden;
+}
+
+.imgshow-list ul {
+    margin: 0 14px;
+    width: 2000px;
+}
+
+.imgshow-list img {
+    width: 220px;
+    height: 130px;
+}
+
+.imgshow-list li {
+    float: left;
+    margin: 0 13px;
+}
+
+.imgshow-list li a {
+    position: relative;;
+    display: block;
+}
+
+.img-bg {
+    position: absolute;
+    width: 100%;
+    height: 30px;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    line-height: 30px;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+
+}
+
+.imgshow-arrow {
+    position: absolute;
+    z-index: -1;
+    top: 82px;
+    height: 29px;
+    width: 765px;
+}
+
+.arrow-left {
+    position: absolute;
+    top: 82px;
+    cursor: pointer;
+    width: 14px;
+    height: 29px;
+    background: url(../images/arrowleft.png);
+}
+
+.arrow-right {
+    position: absolute;
+    top: 82px;
+    right: 0;
+    cursor: pointer;
+    width: 14px;
+    height: 29px;
+    background: url(../images/arrowright.png);
+}
+
+/* 房产右侧内容 */
+.floor-pane2 {
+    margin-left: 25px;
+    width: 272px;
+}
+
+.floor-pane2 h3 {
+    font-size: 16px;
+    color: #e8284c;
+}
+
+.kanfang {
+
+}
+
+.kanfang i {
+    float: left;
+    margin: 2px 5px 0 0;
+    width: 18px;
+    height: 18px;
+    line-height: 18px;
+    text-align: center;
+    display: block;
+    color: #ffffff;
+
+    background: #cccccc;
+    border-radius: 3px;
+}
+
+.kanfang li a {
+    display: block;
+    width: 272px;
+    height: 26px;
+    overflow: hidden;
+    margin: 3px 0;
+}
+
+.kanfang li p {
+    width: 272px;
+    height: 48px;
+    color: #999;
+    overflow: hidden;
+}
+
+.cars {
+    margin-top: 20px;
+}
+
+.car-info {
+    width: 420px;
+}
+
+.car-info li {
+    float: left;
+    width: 200px;
+    margin: 6px 10px 0 0;
+    font-size: 12px;
+}
+.car-info li i {
+    padding: 1px 4px;
+    margin-right: 8px;
+    color: #ffffff;
+    background: #289ee8;
+}
+.fours-sale li:first-child{
+    margin-bottom: 9px;
+}
+.fours-sale li{
+    margin: 4px 0;
+}
+.fours-sale li a{
+    font-size: 12px;
 }
 
 
+.fours-sale img{
+    width: 272px;
+    height: 110px;
+  }
+.fours-sale .item-active{
+    position: relative;
+    height: 110px;
+}
+.fours-sale li i{
+    margin: 6px 8px 0 0 ;
+    width: 5px;
+    height: 5px;
+    border-radius: 5px;
+}
