@@ -8,9 +8,13 @@
     <title>濠滨论坛—首页</title>
     <link rel="stylesheet" href="css/index.css">
     <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
-
+    <script type="text/javascript">
+        $(function(){
+            pingyimove(".left_1",".right_1",".pic",".dian",".box");
+            pingyimove(".left_2",".right_2",".pic",".dian",".box");
+        })
+    </script>
     <!--[if lt IE 9]>
-    <script src="js/lib/html5shiv.min.js"></script>
     <![endif]-->
 </head>
 <body>
@@ -123,12 +127,15 @@
             </ul>
         </div>
     </div>
+    <!--  顶部标题栏到此结束 -->
     <div class="container">
         <header class="header">
+            <!-- logo -->
             <div class="logo fl"><a href=""><img src="images/logo.png"></a></div>
+            <!-- 搜索 -->
             <div class="search fl">
                 <div class="search-panel-fields fl">
-                    <div class="search-select fl"><a id="search_select" href="""><span class="drop">帖子</span><i
+                    <div class="search-select fl"><a id="search_select" href=""><span class="drop">帖子</span><i
                             class="icon-arrow2"></i></a></div>
                     <div class="select-bd"></div>
                     <div class="search-box fl">
@@ -137,10 +144,13 @@
                 </div>
                 <div class="search-button fl"></div>
             </div>
+            <!-- 天气 -->
             <article class="weather"></article>
         </header>
+        <!--  头部logo和搜索到此结束 -->
         <section class="nav cl">
             <nav class="navigation">
+                <!-- 主导航栏 -->
                 <div class="tab_holder">
                     <ul class="nav1">
                         <li class="navhover"><a href="">首页</a></li>
@@ -155,6 +165,7 @@
                     </ul>
 
                 </div>
+                <!-- 副导航栏 -->
                 <div class="nav_holder">
                     <dl class="dl1">
                         <dt><a href=""><i></i>民生</a></dt>
@@ -174,9 +185,9 @@
                                 <li><a href="">美食天地</a></li>
                                 <li><a href="">家居装潢</a></li>
                                 <li><a href="">教育培训</a></li>
-                                <li class="notice"><a href="">谈婚论嫁</a></li>
+                                <li class="strong"><a href="">谈婚论嫁</a></li>
                                 <li><a href="">旅游天下</a></li>
-                                <li class="notice"><a href="">濠滨房产</a></li>
+                                <li class="strong"><a href="">濠滨房产</a></li>
                                 <li><a href="">健康医疗</a></li>
                                 <li><a href="">母婴亲子</a></li>
                                 <li><a href="">金融理财</a></li>
@@ -188,10 +199,10 @@
                         <dt><a href=""><i></i>信息</a></dt>
                         <dd>
                             <ul>
-                                <li class="notice"><a href="">跳蚤</a></li>
+                                <li class="strong"><a href="">跳蚤</a></li>
                                 <li><a href="">租房</a></li>
                                 <li><a href="">970说法</a></li>
-                                <li class="notice"><a href="">人才</a></li>
+                                <li class="strong"><a href="">人才</a></li>
                                 <li><a href="">租车</a></li>
                                 <li><a href="">政府访谈</a></li>
                             </ul>
@@ -200,29 +211,37 @@
                 </div>
             </nav>
         </section>
+        <!--  头部导航栏到此结束 -->
         <section class="main cl">
             <div class="main-grid1 fl   ">
+                <!-- 主要内容大图信息展示 -->
                 <article class="main-slider">
                     <section class="slider-bd">
-                        <ul>
-                            <li>
-                                <a class="figure" target="_blank" href=""><img src=""></a>
-                            </li>
-                            <li>
-                                <a class="figure" target="_blank" href=""><img src="></a>
-                            </li>
-                            <li>
-                                <a class="figure" target="_blank" href=""><img src=""></a>
-                            </li>
-                            <li>
-                                <a class="figure" target="_blank" href=""><img src=""></a>
-                            </li>
-                        </ul>
+                        <div id="banner" class="keng">
+                            <div class="box">
+                                <ul class="pic yyy">
+                                    <li><img src="images/001.jpg"/></li>
+                                    <li><img src="images/002.jpg"/></li>
+                                    <li><img src="images/003.jpg"/></li>
+                                    <li><img src="images/004.jpg"/></li>
+                                </ul>
+
+                                <button class="left left_1"></button>
+                                <button class="right right_1"></button>
+                            </div>
+                            <ul class="dian">
+                                <li class="current"></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                            </ul>
+
+                        </div>
                     </section>
                     <section class="slider-ft">
-
                     </section>
                 </article>
+                <!-- 主要内容爆料信息展示 -->
                 <article class="baoliao">
                     <header class="baoliao-hd">
                         <h3 class="title fl">
@@ -237,10 +256,12 @@
                                     <span class="figure fl">
                                         <img src=""><i>1</i>
                                     </span>
-                                    <span class="info fl">
+
+                                    <div class="info fl">
                                         <strong>19号景瑞御府城市展厅公开asdasdasd</strong>
+
                                         <p>作为景瑞在南通继望府和海门御江山之后的第三个项目，景瑞御府更是带着大家的期待扬帆起航！asdasdasdasda</p>
-                                    </span>
+                                    </div>
                                 </a>
                             </li>
                             <li class="item">
@@ -276,10 +297,10 @@
                         </ol>
                     </section>
                 </article>
-
             </div>
             <div class="main-grid2 fl">
                 <article class="top-news">
+                    <!-- 主要内容重点信息展示 -->
                     <section class="news-list">
                         <h3 class="title"><a target="_blank" href="">南通通师二附小学四9班竟然发生校园暴力？</a></h3>
 
@@ -292,9 +313,10 @@
                         <p>
                             一箭二十星的长征六号火箭是海安人指挥发射的，你知道吗？ 9月20日7时01分，我国新型运载火箭长征六号在太原卫星发射中心点火发射，成功将20颗微</p>
                     </section>
+                    <!-- 主要内容投票PK -->
                     <section class="news-list pk" id="pk">
-
                     </section>
+                    <!-- 主要内容副重点信息展示 -->
                     <section class="news-list">
                         <h3 class="title"><a target="_blank" href="">我在这拼老命给你生儿子，你们在家睡觉?</a></h3>
                         <ul class="kuaixun">
@@ -306,8 +328,9 @@
                                 <span class="fl">[<a target="_blank" href="">新闻快讯</a>]</span><a target="_blank" href="">安琪儿幼儿园幼儿被打"事件后续
                                 孩子已经回去上学</a>
                             </li>
-                            <li class="notice">
-                                <span class=" fl">[<a target="_blank" href="">新闻快讯</a>]</span><a target="_blank" href="">中秋不愁没地儿去
+                            <li class="strong">
+                                <span class=" fl">[<a target="_blank" href="">新闻快讯</a>]</span><a target="_blank"
+                                                                                                 href="">中秋不愁没地儿去
                                 9.27下午云中歌驾临京扬发月饼啦!</a>
                             </li>
                             <li>
@@ -358,12 +381,10 @@
                             </li>
                         </ul>
                     </section>
-
                 </article>
-
-
             </div>
             <div class="main-grid3 fl">
+                <!-- 登录注册模块 -->
                 <aside class="loginbox">
                     <div class="unlogin">
                         <a class="login" href="">登录</a>
@@ -377,6 +398,7 @@
                         </span>
                     </div>
                 </aside>
+                <!-- 果鲜特卖 -->
                 <section class="fruit-sale fl">
                     <header class="baoliao-hd">
                         <h3 class="title fl">
@@ -384,25 +406,7 @@
                         </h3>
                     </header>
                     <div class="fruit-list">
-                        <ui>
-                            <li>
-                                <a target="_blank" href="">
-                                    <img class="fruit-img" src="2">
-
-                                    <p>【最后24小时】果鲜今日大特价—崔玉丽5.8元/斤</p>
-                                    <span><strong>￥</strong>59<del>￥138</del></span>
-                                </a>
-                            </li>
-                            <li>
-                                <a target="_blank" href="">
-                                    <img class="fruit-img" src="">
-
-                                    <p>【最后24小时】果鲜今日大特价—崔玉丽5.8元/斤</p>
-                                    <span><strong>￥</strong>59<del>￥138</del></span>
-                                </a>
-                            </li>
-                        </ui>
-                        <ui>
+                        <ul>
                             <li>
                                 <a target="_blank" href="">
                                     <img class="fruit-img" src="">
@@ -419,8 +423,8 @@
                                     <span><strong>￥</strong>59<del>￥138</del></span>
                                 </a>
                             </li>
-                        </ui>
-                        <ui>
+                        </ul>
+                        <ul>
                             <li>
                                 <a target="_blank" href="">
                                     <img class="fruit-img" src="">
@@ -437,10 +441,29 @@
                                     <span><strong>￥</strong>59<del>￥138</del></span>
                                 </a>
                             </li>
-                        </ui>
+                        </ul>
+                        <ul>
+                            <li>
+                                <a target="_blank" href="">
+                                    <img class="fruit-img" src="">
+
+                                    <p>【最后24小时】果鲜今日大特价—崔玉丽5.8元/斤</p>
+                                    <span><strong>￥</strong>59<del>￥138</del></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a target="_blank" href="">
+                                    <img class="fruit-img" src="">
+
+                                    <p>【最后24小时】果鲜今日大特价—崔玉丽5.8元/斤</p>
+                                    <span><strong>￥</strong>59<del>￥138</del></span>
+                                </a>
+                            </li>
+                        </ul>
                     </div>
-                    <div class="arrowdown3"></div>
+                    <div id="down_arrow" class="arrowdown3"></div>
                 </section>
+                <!-- 帮您省钱 -->
                 <section class="save-money fl">
                     <header class="baoliao-hd">
                         <h3 class="title fl">
@@ -457,7 +480,7 @@
                             <li>
                                 <img class="qian" src="images/qian.png">
                                 <span><a target="_blank" href="">Midea 美的 WFC4020Q 电饭煲 4L+凑单品</a></span>
-                                <span class="notice"><a target="_blank" href="">这是一份很有诚意的中秋礼！濠滨果鲜</a></span>
+                                <span class="strong"><a target="_blank" href="">这是一份很有诚意的中秋礼！濠滨果鲜</a></span>
                             </li>
                             <li>
                                 <img class="zhuang" src="images/zhuang.png">
@@ -472,25 +495,27 @@
                         </ul>
                     </article>
                 </section>
-                <aside class="ad1"><a href="" target=""><img src=""> </a> </aside>
+                <aside class="ad1"><a href="" target=""><img src=""> </a></aside>
+                <!-- 社交模块 -->
                 <aside class="social-list">
                     <ul>
                         <li class="weibo">
-                            <a target="_blank" href=""><img src="images/weibo.png">微博</a>
+                            <a target="_blank" href=""><i></i>濠滨微博</a>
                         </li>
                         <li class="weixin">
-                            <a target="_blank" href=""><img src="images/weixin2.png">微信</a>
+                            <a target="_blank" href=""><i></i>濠滨微信</a>
                         </li>
                         <li class="app-down">
-                            <a target="_blank" href=""><img src="images/app2.png">客户端</a>
+                            <a target="_blank" href=""><i></i>客户端</a>
                         </li>
                         <li class="email">
-                            <a target="_blank" href=""><img src="images/email.png">意见反馈</a>
+                            <a target="_blank" href=""><i></i>意见反馈</a>
                         </li>
                     </ul>
                 </aside>
             </div>
         </section>
+        <!--  头部主要内容到此结束 -->
         <section class="activity cl">
             <header class="act-title">
                 <h1>精彩活动</h1>
@@ -560,6 +585,7 @@
                 </div>
             </div>
         </section>
+        <!--  精彩活动内容到此结束 -->
         <section class="buidings cl">
             <header class="act-title">
                 <h1>房产楼市</h1>
@@ -643,11 +669,12 @@
                         </li>
                     </ul>
                 </section>
-                <aside class="ad2"><a href="" target=""><img src=""> </a> </aside>
+                <aside class="ad2"><a href="" target=""><img src=""> </a></aside>
 
-                <aside class="ad2"><a href="" target=""><img src=""> </a> </aside>
+                <aside class="ad2"><a href="" target=""><img src=""> </a></aside>
             </aside>
         </section>
+        <!--  房产楼市到此结束 -->
         <section class="cars cl">
             <header class="act-title">
                 <h1>濠滨车市</h1>
@@ -779,16 +806,17 @@
                 </section>
             </aside>
         </section>
+        <!--  濠滨车市到此结束 -->
         <section class="home cl">
             <header class="act-title">
-                <h1>濠滨车市</h1>
+                <h1>家居装潢</h1>
                 <nav class="activity-nav">
                     <ul>
-                        <li><a href="">南通车市</a></li>
-                        <li><a href="">装潢维修</a></li>
-                        <li><a href="">我要学车</a></li>
-                        <li><a href="">车友俱乐部</a></li>
-                        <li><a href="">投诉维权</a></li>
+                        <li><a href="">装修讨论</a></li>
+                        <li><a href="">家居日记</a></li>
+                        <li><a href="">公益验房</a></li>
+                        <li><a href="">装修招标</a></li>
+                        <li><a href="">装修看房团</a></li>
                     </ul>
                 </nav>
             </header>
@@ -800,38 +828,15 @@
                         <p>
                             众所周知，从前的港闸区还是个名不见经传的区域板块，但是自从北翼新城的口号提出以后，港闸老城焕发了新的魅力，各大品牌房企入驻层出不穷：万科、保利、华润、中海等，不胜枚举；在商业方面，也有万达、万科、宜家等多个品牌进驻。如今的港闸区早已今非昔比。今天，就跟随小编的脚步来逛一逛港闸区各大热销楼盘吧！</p>
                     </section>
-                    <ul class="car-info">
-                        <li>
-                            <i>杂谈</i><a href="" target="">在公交车上看见一极品妹子</a>
-                        </li>
-                        <li>
-                            <i>杂谈</i><a href="" target="">在公交车上看见一极品妹子</a>
-                        </li>
-                        <li>
-                            <i>杂谈</i><a href="" target="">在公交车上看见一极品妹子</a>
-                        </li>
-                        <li>
-                            <i>杂谈</i><a href="" target="">在公交车上看见一极品妹子</a>
-                        </li>
-                        <li>
-                            <i>杂谈</i><a href="" target="">在公交车上看见一极品妹子</a>
-                        </li>
-                        <li>
-                            <i>杂谈</i><a href="" target="">在公交车上看见一极品妹子</a>
-                        </li>
-                        <li>
-                            <i>杂谈</i><a href="" target="">在公交车上看见一极品妹子</a>
-                        </li>
-                        <li>
-                            <i>杂谈</i><a href="" target="">在公交车上看见一极品妹子</a>
-                        </li>
-
-
-                    </ul>
+                    <section>
+                        <header class="news-title"><a href="" target=""> 北翼新城崛起 盘点卖得风生水起的楼盘</a></header>
+                        <p>
+                            众所周知，从前的港闸区还是个名不见经传的区域板块，但是自从北翼新城的口号提出以后，港闸老城焕发了新的魅力，各大品牌房企入驻层出不穷：万科、保利、华润、中海等，不胜枚举；在商业方面，也有万达、万科、宜家等多个品牌进驻。如今的港闸区早已今非昔比。今天，就跟随小编的脚步来逛一逛港闸区各大热销楼盘吧！</p>
+                    </section>
                 </article>
                 <aside class="floor-imgshow">
                     <header class="imgshow-title">
-                        <h3>热盘推荐</h3><a class="link-more fr" href="" target="_blank">更多<i></i></a>
+                        <h3>家装日记</h3><a class="link-more fr" href="" target="_blank">更多<i></i></a>
                     </header>
                     <div class="imgshow-list">
                         <ul>
@@ -855,7 +860,151 @@
             </div>
             <aside class="floor-pane2 fl">
                 <header class="imgshow-title">
-                    <h3>南通4S店优惠</h3><a class="link-more fr" href="" target="_blank">更多<i></i></a>
+                    <h3>装修<strong>零</strong>成本 免费提供<strong>五项</strong>服务</h3>
+                </header>
+                <div class="special">
+                    <ul>
+                        <li class="item1"><a href="" target="_blank"><i></i>免费测量</a></li>
+                        <li class="item2"><a href="" target="_blank"><i></i>免费设计</a></li>
+                        <li class="item3"><a href="" target="_blank"><i></i>免费报价</a></li>
+                        <li class="item4"><a href="" target="_blank"><i></i>方案PK</a></li>
+                        <li class="item5"><a href="" target="_blank"><i></i>免费验房</a></li>
+                    </ul>
+                </div>
+                <div class="apply">
+                    <form target="_blank" method="get" action="" name="apply-for">
+                        <input class="text" type="text" value="" placeholder="请填写您的手机号码" name="mobile">
+                        <input class="aBt" type="submit" value="申请">
+                    </form>
+                </div>
+                <div class="notice">
+                    <i></i><span>至今已帮<em class="">728</em>业主找到放心的家装公司</span>
+                </div>
+                <aside class="ad3"><a href="" target=""><img src=""> </a></aside>
+            </aside>
+        </section>
+        <!--  家居装潢到此结束 -->
+        <section class="food cl">
+            <header class="act-title">
+                <h1>濠滨美食</h1>
+                <nav class="activity-nav">
+                    <ul>
+                        <li><a href="">通城探店</a></li>
+                        <li><a href="">美食话题</a></li>
+                        <li><a href="">DIY私房</a></li>
+                        <li><a href="">吃喝玩乐团</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <div class="floor-pane1 fl">
+                <div class="floor-bgimage"><a href="" target="_blank"><img src=""></a></div>
+                <article class="floor-news">
+                    <section>
+                        <header class="news-title"><a href="" target=""> 北翼新城崛起 盘点卖得风生水起的楼盘</a></header>
+                        <p>
+                            众所周知，从前的港闸区还是个名不见经传的区域板块，但是自从北翼新城的口号提出以后，港闸老城焕发了新的魅力，各大品牌房企入驻层出不穷：万科、保利、华润、中海等，不胜枚举；在商业方面，也有万达、万科、宜家等多个品牌进驻。如今的港闸区早已今非昔比。今天，就跟随小编的脚步来逛一逛港闸区各大热销楼盘吧！</p>
+                    </section>
+                    <section>
+                        <header class="news-title"><a href="" target=""> 北翼新城崛起 盘点卖得风生水起的楼盘</a></header>
+                        <p>
+                            众所周知，从前的港闸区还是个名不见经传的区域板块，但是自从北翼新城的口号提出以后，港闸老城焕发了新的魅力，各大品牌房企入驻层出不穷：万科、保利、华润、中海等，不胜枚举；在商业方面，也有万达、万科、宜家等多个品牌进驻。如今的港闸区早已今非昔比。今天，就跟随小编的脚步来逛一逛港闸区各大热销楼盘吧！</p>
+                    </section>
+                </article>
+                <div class="recbs-list fl">
+                    <ul>
+                        <li><a href="" target=""><img src=""></a></li>
+                        <li><a href="" target=""><img src=""></a></li>
+                        <li><a href="" target=""><img src=""></a></li>
+                        <li><a href="" target=""><img src=""></a></li>
+                        <li><a href="" target=""><img src=""></a></li>
+                        <li><a href="" target=""><img src=""></a></li>
+                    </ul>
+                </div>
+                <div class="recfd-list fl">
+                    <ul>
+                        <li><a href="" target=""><img src="">亲手做的鱼</a></li>
+                        <li><a href="" target=""><img src="">亲手做的鱼</a></li>
+                        <li><a href="" target=""><img src="">亲手做的鱼</a></li>
+                        <li><a href="" target=""><img src="">亲手做的鱼</a></li>
+                        <li><a href="" target=""><img src="">亲手做的鱼</a></li>
+                        <li><a href="" target=""><img src="">亲手做的鱼</a></li>
+                    </ul>
+                </div>
+            </div>
+            <aside class="floor-pane2 fl">
+                <header class="imgshow-title">
+                    <h3>全城通缉会吃<strong>辣</strong>的你！</h3>
+                </header>
+                <a href="" target=""><img src="" style="width: 272px ; height: 154px;margin: 10px 0 "></a>
+
+                <h2><a href="" target="_blank">霸王餐-超辣重庆火锅</a></h2>
+
+                <p>中国首家矿泉水火锅，从色调、桌子、门，餐具五步一处没有体现出重庆火锅文化。去重启吃老火锅</p>
+
+                <div class="apply">
+                    <form target="_blank" method="get" action="" name="apply-for">
+                        <input class="text" type="text" value="" placeholder="请填写您的姓名" name="name">
+                        <input class="text" type="text" value="" placeholder="请填写您的手机号码" name="mobile">
+                        <input class="aBt" type="submit" value="">
+                    </form>
+                </div>
+                <div class="notice">
+                    <i></i><span>活动时间：<b>9月19日晚18:00（周三）</b></span>
+                </div>
+            </aside>
+        </section>
+        <!--  濠滨美食到此结束 -->
+        <section class="marriage cl">
+            <header class="act-title">
+                <h1>濠滨婚嫁</h1>
+                <nav class="activity-nav">
+                    <ul>
+                        <li><a href="">谈婚论嫁</a></li>
+                        <li><a href="">婚姻生活</a></li>
+                        <li><a href="">婚纱摄影</a></li>
+                        <li><a href="">婚庆服务</a></li>
+                        <li><a href="">专题活动</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <div class="floor-pane1 fl">
+                <div class="floor-bgimage"><a href="" target="_blank"><img src=""></a></div>
+                <article class="floor-news">
+                    <section>
+                        <header class="news-title"><a href="" target=""> 北翼新城崛起 盘点卖得风生水起的楼盘</a></header>
+                        <p>
+                            众所周知，从前的港闸区还是个名不见经传的区域板块，但是自从北翼新城的口号提出以后，港闸老城焕发了新的魅力，各大品牌房企入驻层出不穷：万科、保利、华润、中海等，不胜枚举；在商业方面，也有万达、万科、宜家等多个品牌进驻。如今的港闸区早已今非昔比。今天，就跟随小编的脚步来逛一逛港闸区各大热销楼盘吧！</p>
+                    </section>
+                    <section>
+                        <header class="news-title"><a href="" target=""> 北翼新城崛起 盘点卖得风生水起的楼盘</a></header>
+                        <p>
+                            众所周知，从前的港闸区还是个名不见经传的区域板块，但是自从北翼新城的口号提出以后，港闸老城焕发了新的魅力，各大品牌房企入驻层出不穷：万科、保利、华润、中海等，不胜枚举；在商业方面，也有万达、万科、宜家等多个品牌进驻。如今的港闸区早已今非昔比。今天，就跟随小编的脚步来逛一逛港闸区各大热销楼盘吧！</p>
+                    </section>
+                </article>
+                <aside class="floor-imgshow">
+                    <div class="imgshow-list">
+                        <ul>
+                            <li>
+                                <a href=" " target=""><img src=""> </a>
+                            </li>
+                            <li>
+                                <a href=" " target=""><img src=""> </a>
+                            </li>
+                            <li>
+                                <a href=" " target=""><img src=""> </a>
+                            </li>
+                            <li>
+                                <a href=" " target=""><img src=""> </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="arrow-left2"></div>
+                    <div class="arrow-right2"></div>
+                </aside>
+            </div>
+            <aside class="floor-pane2 fl">
+                <header class="imgshow-title">
+                    <h3>我要结婚</h3><a class="link-more fr" href="" target="_blank">更多<i></i></a>
                 </header>
                 <section class="kanfang fours-sale">
                     <ul>
@@ -906,16 +1055,101 @@
                                 这三种情况也算“酒驾” 90%的车主都不晓得
                             </a>
                         </li>
+
+
                     </ul>
                 </section>
             </aside>
         </section>
-        <section class="food"></section>
-        <section class="marriage"></section>
-        <section class="hotphoto"></section>
-        <footer class="footer"></footer>
+        <!--  濠滨婚嫁到此结束 -->
+        <section class="hotphoto cl">
+            <header class="act-title">
+                <h1>论坛热图</h1>
+            </header>
+            <article class="image-show">
+                <ul>
+                    <li class="image1">
+                        <a class="image1-1" href="" target=""><img src=""></a>
+                        <a class="image1-2" href="" target=""><img src=""></a>
+                    </li>
+                    <li class="image2">
+                        <a class="image1-1" href="" target=""><img src=""></a>
+                        <a class="image1-2" href="" target=""><img src=""></a>
+                    </li>
+                    <li class="image3">
+                        <a class="image1-1" href="" target=""><img src=""></a>
+                        <a class="image1-2" href="" target=""><img src=""></a>
+                    </li>
+                    <li class="image4">
+                        <a class="image1-1" href="" target=""><img src=""></a>
+                        <a class="image1-2" href="" target=""><img src=""></a>
+                    </li>
+                </ul>
+            </article>
+        </section>
+        <!--  论坛热图到此结束 -->
+        <footer class="footer cl">
+            <!-- 友情链接 -->
+            <div class="yqlj">
+                <span>友情链接:</span>
+                <ul>
+                    <li><a href="" target="_blank">濠滨网</a></li>
+                    <li><a href="" target="_blank">濠滨网</a></li>
+                    <li><a href="" target="_blank">濠滨网</a></li>
+                    <li><a href="" target="_blank">濠滨网</a></li>
+                    <li><a href="" target="_blank">濠滨网</a></li>
+                    <li><a href="" target="_blank">濠滨网</a></li>
+                    <li><a href="" target="_blank">濠滨网</a></li>
+                    <li><a href="" target="_blank">濠滨网</a></li>
+                    <li><a href="" target="_blank">濠滨网</a></li>
+                    <li><a href="" target="_blank">濠滨网</a></li>
+                    <li><a href="" target="_blank">濠滨网</a></li>
+                    <li><a href="" target="_blank">濠滨网</a></li>
+                    <li><a href="" target="_blank">濠滨网</a></li>
+                    <li><a href="" target="_blank">濠滨网</a></li>
+                    <li><a href="" target="_blank">濠滨网</a></li>
+                    <li><a href="" target="_blank">濠滨网</a></li>
+                    <li><a href="" target="_blank">濠滨网</a></li>
+                    <li><a href="" target="_blank">濠滨网</a></li>
+                    <li><a href="" target="_blank">濠滨网</a></li>
+                    <li><a href="" target="_blank">濠滨网</a></li>
+                    <li><a href="" target="_blank">濠滨网</a></li>
+                    <li class="applylj"><a href="" target="_blank">申请友情链接</a></li>
+                </ul>
+            </div>
+            <!-- 其他信息 -->
+            <div class="web-info cl">
+                <p>
+                <span>
+                   <a href="" target="_blank">关于我们</a>
+                     |
+                    <a href="" target="_blank">诚聘英才</a>
+                     |
+                    <a href="" target="_blank">法律声明</a>
+                     |
+                    <a href="" target="_blank">商业合作</a>
+                     |
+                    <a href="" target="_blank">帮助中心</a>
+                     |
+                    <a href="" target="_blank">无图版</a>
+                     |
+                    <a href="" target="_blank">申请表</a>
+                     |
+                    <a href="" target="_blank">手机版</a>
+                </span>
+
+                <p>信息产业部备案：苏ICP备05014191号 经营性ICP许可证：苏B2-20110445 Powered by<a href="" target="">濠滨网</a> ,© 2001-2013
+                    0513.org All Right Reserved.</p>
+
+                <p>投诉争议 技术支持： <a href="" target="">第一互联</a> GMT+8, 2015-9-17 13:26 , Processed in 0.105282 second(s), 12
+                    queries , Memcache On.</p>
+            </div>
+        </footer>
+        <!--  底部到此结束 -->
     </div>
 </div>
 <script type="text/javascript" src="js/index.js"></script>
+
+<script type="text/javascript" src="js/scroll.js"></script>
 </body>
 </html>

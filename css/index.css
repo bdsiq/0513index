@@ -1,5 +1,5 @@
 /* reset */
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, menu, nav, output, ruby, section, summary, time, mark, audio, video {
     margin: 0;
     padding: 0;
     border: 0;
@@ -110,14 +110,6 @@ textarea {
     overflow-y: auto;
 }
 
-::-ms-clear {
-    display: none;
-}
-
-::-ms-reveal {
-    display: none;
-}
-
 .fl {
     float: left;
 }
@@ -130,7 +122,7 @@ textarea {
     clear: both;
 }
 
-.notice a {
+.strong a {
     color: #e8284c;
 }
 
@@ -147,6 +139,13 @@ textarea {
     width: 272px;
     height: 78px;
     margin: 10px 0 2px 0;
+}
+
+.ad3 img {
+    float: left;
+    width: 272px;
+    height: 166px;
+    margin: 14px 0 2px 0;
 }
 
 /* Your module */
@@ -482,7 +481,7 @@ textarea {
 .tab_holder {
     height: 40px;
     line-height: 40px;
-    background: #289ee8;
+    background: #2799e1;
     border-radius: 5px 5px 0 0;
 }
 
@@ -492,14 +491,27 @@ textarea {
 }
 
 .tab_holder li {
+    margin: 0 3px;
     cursor: pointer;
     height: 40px;
     float: left;
+}
+
+.tab_holder a {
+    display: block;
+
     padding: 0 20px;
 }
 
+.tab_holder a:hover {
+    background: #2f8dc8;
+    -webkit-transition: all .5s ease-out;
+    -moz-transition: all .5s ease-out;
+    transition: all .5s ease-out;
+}
+
 .navhover {
-    background: #2382bd;
+    background: #2f8dc8;
     -webkit-transition: all .5s ease-out;
     -moz-transition: all .5s ease-out;
     transition: all .5s ease-out;
@@ -536,13 +548,18 @@ textarea {
 }
 
 .nav_holder dl {
-    margin: 10px 10px 10px 15px;
+    padding: 10px 10px 10px 15px;
     border-right: #dadcd5 1px solid;
     float: left;
     display: inline;
     font-size: 14px;
     height: 65px;
+    cursor: pointer;
     overflow: hidden;
+}
+
+.nhbg {
+    background: #F5F7F8;
 }
 
 .nav_holder dl.dl1 {
@@ -572,7 +589,7 @@ textarea {
 
 .nav_holder dt a {
 
-    color: #289ee8;
+    color: #2799e1;
 }
 
 .nav_holder dt i {
@@ -640,15 +657,104 @@ textarea {
 }
 
 .slider-bd {
-    height: 412px;
 
-    overflow: hidden;
+    height: 412px;
 
 }
 
-.slider-bd img {
+.box {
     width: 320px;
     height: 412px;
+    overflow: hidden;
+    position: relative;
+}
+
+.box .pic {
+    height: 412px;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.box .pic li {
+    width: 320px;
+    height: 412px;
+    float: left;
+}
+
+.box .pic li img {
+    display: block;
+    width: 320px;
+    height: 412px;
+}
+
+.keng {
+    width: 320px;
+    height: 440px;
+    overflow: hidden;
+    position: relative;
+}
+
+.dian {
+    width: 110px;
+    height: 16px;
+    margin: 5px auto;
+    z-index: 99;
+    overflow: hidden;
+}
+
+.dian li {
+    float: left;
+    width: 14px;
+    height: 14px;
+    border-radius: 20px;
+    margin-left: 10px;
+    cursor: pointer;
+
+    border: 1px solid #cccccc;
+}
+
+.dian .current {
+    height: 14px;
+    width: 14px;
+
+    margin-left: 10px;
+    background: #e8284c;
+    border: 1px solid #e8284c;
+
+}
+
+.left {
+    width: 42px;
+    height: 42px;
+    background: url(../images/arrows-48-48-3.png) no-repeat -4px -51px;
+    position: absolute;
+    z-index: 99;
+    top: 91px;
+    left: 0;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.right {
+    width: 42px;
+    height: 42px;
+    background: url(../images/arrows-48-48-3.png) no-repeat -51px -51px;
+    position: absolute;
+    z-index: 99;
+    top: 91px;
+    right: 0;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.left:hover {
+    background-position: -4px -3px;
+}
+
+.right:hover {
+    background-position: -51px -3px;
 }
 
 /* 主要-左侧-爆料 */
@@ -668,14 +774,15 @@ textarea {
     height: 29px;
     text-align: center;
     font-size: 16px;
-    border-bottom: 2px solid #289ee8;
+    border-bottom: 2px solid #2799e1;
 }
 
 .baoliao-hd .title b {
-    color: #289ee8;
+    color: #2799e1;
 }
 
 .link-more {
+    margin-right: 2px;
     line-height: 30px;
     font-size: 12px;
     color: #999;
@@ -777,7 +884,7 @@ textarea {
 
 .top-news .news-list {
     text-align: center;
-    margin: 0px 0 10px 0;
+    margin: 0 0 10px 0;
 }
 
 .top-news .news-list .title {
@@ -812,7 +919,7 @@ textarea {
 
 .top-news .news-list .kuaixun span, .top-news .news-list .kuaixun span a {
     text-indent: 0;
-    color: #289ee8;
+    color: #2799e1;
 }
 
 .top-news .news-list .kuaixun {
@@ -850,17 +957,25 @@ textarea {
     margin: 10px 5px;
     color: #ffffff;
     font-size: 16px;
-    padding: 8px 41px;
+    padding: 7px 41px;
 
     border-radius: 30px;
 }
 
 .unlogin .login {
-    background: #289ee8;
+    background-color: #2799e1;
+}
+
+.unlogin .login:hover {
+    background-color: #2f8dc8;
 }
 
 .unlogin .regist {
-    background: #f3a528;
+    background-color: #f3a528;
+}
+
+.unlogin .regist:hover {
+    background-color: #df9a2d;
 }
 
 .unlogin .other-lg {
@@ -981,11 +1096,111 @@ textarea {
     float: left;
 }
 
-.social-list li img {
+.social-list li i {
     display: block;
     width: 49px;
     height: 42px;
     margin: 0 auto;
+    background: url(../images/social.png) no-repeat;
+    -webkit-transition: all .12s ease;
+    -moz-transition: all .12s ease;
+    transition: all .12s ease;
+}
+
+.social-list .weibo i {
+    background-position: -10px -322px;
+}
+
+.social-list .weixin i {
+    background-position: -10px -218px;
+}
+
+.social-list .app-down i {
+    background-position: -10px -114px;
+}
+
+.social-list .email i {
+    background-position: -10px -10px;
+}
+
+.social-list .weibo a:hover i {
+    background-position: -10px -374px;
+}
+
+.social-list .weixin a:hover i {
+    background-position: -10px -270px;
+}
+
+.social-list .app-down a:hover i {
+    background-position: -10px -166px;
+}
+
+.social-list .email a:hover i {
+    background-position: -10px -62px;
+}
+
+.social-list .weibo a:hover {
+    color: #df0e23;
+}
+
+.social-list .weixin a:hover {
+    color: #05ab10;
+}
+
+.social-list .app-down a:hover {
+    color: #2382bd;
+}
+
+.social-list .email a:hover {
+    color: #ff9933;
+}
+
+._r2_c16 {
+    width: 49px;
+    height: 42px;
+    background-position: -10px -10px;
+}
+
+._r2_c14 {
+    width: 49px;
+    height: 42px;
+    background-position: -10px -62px;
+}
+
+._r2_c12 {
+    width: 49px;
+    height: 42px;
+    background-position: -10px -114px;
+}
+
+._r2_c10 {
+    width: 49px;
+    height: 42px;
+    background-position: -10px -166px;
+}
+
+._r2_c8 {
+    width: 49px;
+    height: 42px;
+    background-position: -10px -218px;
+}
+
+._r2_c6 {
+    width: 49px;
+    height: 42px;
+    background-position: -10px -270px;
+}
+
+._r2_c4 {
+    width: 49px;
+    height: 42px;
+    background-position: -10px -322px;
+}
+
+._r2_c2 {
+    width: 49px;
+    height: 42px;
+    background-position: -10px -374px;
 }
 
 .social-list li a {
@@ -1011,12 +1226,12 @@ textarea {
     height: 40px;
     line-height: 40px;
     margin-top: -1px;
-    color: #289ee8;
+    color: #2799e1;
     text-align: center;
     font-size: 24px;
     font-weight: bold;
     width: 120px;
-    border-top: 2px solid #289ee8;
+    border-top: 2px solid #2799e1;
 }
 
 .activity-nav {
@@ -1033,13 +1248,13 @@ textarea {
 }
 
 .activity-nav li a:hover {
-    color: #289ee8;
+    color: #2799e1;
 }
 
 .coupon-line {
     width: 60px;
     height: 2px;
-    background: #289ee8;
+    background: #2799e1;
     margin-left: 130px;
 }
 
@@ -1071,7 +1286,7 @@ textarea {
 }
 
 .content-hd a {
-    color: #289ee8;
+    color: #2799e1;
 }
 
 .content-bd {
@@ -1177,6 +1392,7 @@ textarea {
 
 .floor-news {
     width: 420px;
+    height: 200px;
     float: left;
     margin-left: 25px;
 }
@@ -1197,7 +1413,7 @@ textarea {
 }
 
 .news-title a {
-    color: #289ee8;
+    color: #2799e1;
 }
 
 .news-title a:hover {
@@ -1270,6 +1486,15 @@ textarea {
     width: 765px;
 }
 
+.arrow-left2 {
+    position: absolute;
+    top: 82px;
+    cursor: pointer;
+    width: 21px;
+    height: 42px;
+    background: url(../images/arrowleft2.png);
+}
+
 .arrow-left {
     position: absolute;
     top: 82px;
@@ -1277,6 +1502,16 @@ textarea {
     width: 14px;
     height: 29px;
     background: url(../images/arrowleft.png);
+}
+
+.arrow-right2 {
+    position: absolute;
+    top: 82px;
+    right: 0;
+    cursor: pointer;
+    width: 21px;
+    height: 42px;
+    background: url(../images/arrowright2.png);
 }
 
 .arrow-right {
@@ -1335,6 +1570,7 @@ textarea {
 
 .cars {
     margin-top: 20px;
+    overflow: hidden;
 }
 
 .car-info {
@@ -1347,34 +1583,451 @@ textarea {
     margin: 6px 10px 0 0;
     font-size: 12px;
 }
+
 .car-info li i {
     padding: 1px 4px;
     margin-right: 8px;
     color: #ffffff;
-    background: #289ee8;
+    background: #2799e1;
 }
-.fours-sale li:first-child{
-    margin-bottom: 9px;
+
+.fours-sale {
+    height: 348px;
+    overflow: hidden;
 }
-.fours-sale li{
+
+.fours-sale li:first-child {
+    margin-bottom: 8px;
+}
+
+.fours-sale li {
     margin: 4px 0;
 }
-.fours-sale li a{
+
+.fours-sale li a {
     font-size: 12px;
 }
 
-
-.fours-sale img{
+.fours-sale img {
     width: 272px;
     height: 110px;
-  }
-.fours-sale .item-active{
+}
+
+.fours-sale .item-active {
     position: relative;
     height: 110px;
 }
-.fours-sale li i{
-    margin: 6px 8px 0 0 ;
+
+.fours-sale li i {
+    margin: 6px 8px 0 0;
     width: 5px;
     height: 5px;
     border-radius: 5px;
+}
+
+/* 家居装潢 */
+.home {
+    margin-top: 20px;
+    overflow: hidden;
+}
+
+.home .floor-pane2 .imgshow-title h3 {
+    font-size: 18px;
+    color: #333333;
+}
+
+.home .floor-pane2 .imgshow-title strong {
+    font-size: 24px;
+    color: #f3a528;
+}
+
+.home .special {
+    margin: 10px 0;
+
+    padding-left: 1px;
+    overflow: hidden;
+}
+
+.home .special li {
+    margin: 0 2px;
+    width: 50px;
+    float: left;
+    font-size: 12px;
+    text-align: center;
+}
+
+.home .special i {
+    display: block;
+    margin: 0 auto;
+    width: 37px;
+    height: 40px;
+    background: url(../images/special.png) no-repeat;
+}
+
+.home .special .item1 i {
+    background-position: -10px -210px;
+}
+
+.home .special .item2 i {
+    background-position: -10px -160px;
+}
+
+.home .special .item3 i {
+    background-position: -10px -110px;
+}
+
+.home .special .item4 i {
+    background-position: -10px -60px;
+}
+
+.home .special .item5 i {
+    background-position: -10px -10px;
+}
+
+.home .special a {
+    color: #666;
+}
+
+.home .special a:hover {
+    color: #f3a528;
+}
+
+.apply {
+    margin-bottom: 7px;
+    padding: 6px;
+    height: 32px;
+    background: #f5f7f8;
+}
+
+.apply .text {
+    padding-left: 5px;
+    height: 32px;
+    width: 205px;
+}
+
+.apply .aBt {
+    margin-left: 4px;
+    height: 32px;
+    width: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #f3a528;
+    background: none;
+}
+
+.notice {
+    float: left;
+    margin: 3px;
+    overflow: hidden;
+}
+
+.notice i {
+    display: block;
+    float: left;
+    width: 21px;
+    height: 21px;
+    background: url(../images/sprite-common2.png) no-repeat -10px -156px;;
+
+}
+
+.notice span {
+    float: left;
+    margin: 1px 0 0 2px;
+    color: #666;
+}
+
+.notice em {
+    font-weight: bold;
+    color: #f3a528;
+}
+
+/* 美食 */
+
+.food {
+    margin-top: 20px;
+    overflow: hidden;
+}
+
+.recbs-list {
+    margin-top: 10px;
+    width: 320px;
+    overflow: hidden;
+}
+
+.recbs-list img {
+    float: left;
+    width: 160px;
+    height: 60px;
+}
+
+.recfd-list {
+    margin: 10px 0 0 25px;
+    width: 420px;
+    overflow: hidden;
+}
+
+.recfd-list ul {
+    width: 1000px;
+}
+
+.recfd-list li {
+    float: left;
+    height: 178px;
+    margin-right: 10px;
+    text-align: center;
+    border: 1px solid #ececec;
+}
+
+.recfd-list li a {
+    color: #666666;
+}
+
+.recfd-list img {
+    display: block;
+    height: 155px;
+    width: 131px;
+}
+
+.food .imgshow-title h3 {
+    font-size: 18px;
+    color: #333333;
+}
+
+.food .imgshow-title strong {
+    font-size: 24px;
+    color: #e8284c;
+}
+
+.food .floor-pane2 h2 a {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.food .floor-pane2 p {
+    color: #666;
+    font-size: 12px;
+    height: 42px;
+    overflow: hidden;
+}
+
+.food .apply {
+    position: relative;
+    height: 69px;
+    margin-bottom: 0;
+}
+
+.food .apply input:first-child {
+    margin-bottom: 5px;
+}
+
+.food .aBt {
+    position: absolute;
+    text-align: center;
+    top: 21px;
+    right: 10px;
+    width: 39px;
+    height: 40px;
+    background: url(../images/mfbm.png);
+}
+
+/* 婚嫁 */
+.marriage {
+    margin-top: 20px;
+}
+
+.marriage .imgshow-list {
+    width: 765px;
+    height: 206px;
+    padding: 5px 0;
+    overflow: hidden;
+}
+
+.marriage .imgshow-list img {
+    width: 158px;
+    height: 206px;
+    border-radius: 15px;
+}
+
+.marriage .imgshow-title {
+    border-bottom: 1px solid #e8284c;
+}
+
+.marriage .imgshow-title h3 {
+
+    display: block;
+    padding: 4px 8px;
+    color: #ffffff;
+    font-size: 14px;
+    background: #e8284c;
+}
+
+.marriage .fours-sale {
+    height: 426px;
+}
+
+.marriage .fours-sale li {
+    margin: 4px 0;
+}
+
+.marriage .fours-sale li:first-child {
+    margin: 12px 0;
+}
+
+.marriage .fours-sale li {
+    border-bottom: 1px dashed #ececec;
+}
+
+.marriage .fours-sale li:first-child, .marriage .fours-sale li:last-child {
+
+    border-bottom: none;
+}
+
+/* 摄影 */
+
+.hotphoto {
+    margin: 20px 0;
+    overflow: hidden;
+}
+
+.hotphoto .image-show {
+    width: 1062px;
+    height: 430px;
+    margin: 10px 0;
+}
+
+.hotphoto .image-show .image1 {
+    width: 234px;
+    float: left;
+}
+
+.hotphoto .image-show .image1 .image1-1 img {
+    height: 255px;
+}
+
+.hotphoto .image-show .image1 img {
+    border: 1px solid #ffffff;
+    width: 234px;
+    height: 174px;
+}
+
+.hotphoto .image-show .image2 {
+    width: 236px;
+    float: left;
+}
+
+.hotphoto .image-show .image2 .image1-1 img {
+    height: 170px;
+}
+
+.hotphoto .image-show .image2 img {
+    border: 1px solid #ffffff;
+    width: 236px;
+    height: 259px;
+}
+
+.hotphoto .image-show .image3 {
+    width: 362px;
+    float: left;
+}
+
+.hotphoto .image-show .image3 .image1-1 img {
+    height: 255px;
+}
+
+.hotphoto .image-show .image3 img {
+
+    border: 1px solid #ffffff;
+    width: 362px;
+    height: 174px;
+}
+
+.hotphoto .image-show .image4 {
+    width: 228px;
+    float: left;
+}
+
+.hotphoto .image-show .image4 img {
+
+    border: 1px solid #ffffff;
+    width: 228px;
+    height: 255px;
+}
+
+.hotphoto .image-show .image4 .image1-1 img {
+
+    height: 174px;
+}
+
+.hotphoto .image-show .image1 .image1-1 img, .hotphoto .image-show .image2 .image1-1 img, .hotphoto .image-show .image3 .image1-1 img, .hotphoto .image-show .image4 .image1-1 img {
+    border-bottom: none;
+}
+
+/* 底部 */
+
+.footer {
+    font-size: 12px;
+}
+
+.footer .yqlj {
+    padding: 15px 0;
+    overflow: hidden;
+    border: 1px solid #ececec;
+    border-right: none;
+    border-left: none;
+}
+
+.footer .yqlj span {
+    float: left;
+    width: 80px;
+    font-weight: bold;
+}
+
+.footer .yqlj ul {
+    width: 980px;
+    float: left;
+}
+
+.footer .yqlj li {
+    margin: 0 10px;
+    line-height: 25px;
+    float: left;
+}
+
+.footer .yqlj a {
+    color: #666666;
+}
+
+.footer .applylj a {
+    color: #2799e1;
+}
+
+.footer .web-info {
+    color: #666;
+    text-align: center;
+    margin: 20px auto;
+}
+
+.footer .web-info span {
+    color: #cccccc;
+}
+
+.footer .web-info p {
+    margin: 3px 0;
+}
+
+.footer .web-info p:first-child {
+    margin: 6px 0;
+}
+
+.footer .web-info a {
+    color: #666;
+    padding: 0 5px;
+}
+
+.footer .web-info a:hover {
+    color: #e8284c;
+}
+
+.footer .web-info li {
+    float: left;
 }
