@@ -664,7 +664,7 @@ textarea {
 
 .box {
     width: 320px;
-    height: 412px;
+    height: 440px;
     overflow: hidden;
     position: relative;
 }
@@ -689,25 +689,18 @@ textarea {
     height: 412px;
 }
 
-.keng {
-    width: 320px;
-    height: 440px;
-    overflow: hidden;
-    position: relative;
-}
-
 .dian {
     width: 110px;
     height: 16px;
-    margin: 5px auto;
+    margin: 420px auto 8px;
     z-index: 99;
     overflow: hidden;
 }
 
 .dian li {
     float: left;
-    width: 14px;
-    height: 14px;
+    width: 12px;
+    height: 12px;
     border-radius: 20px;
     margin-left: 10px;
     cursor: pointer;
@@ -716,9 +709,8 @@ textarea {
 }
 
 .dian .current {
-    height: 14px;
-    width: 14px;
-
+    height: 12px;
+    width: 12px;
     margin-left: 10px;
     background: #e8284c;
     border: 1px solid #e8284c;
@@ -726,35 +718,45 @@ textarea {
 }
 
 .left {
-    width: 42px;
-    height: 42px;
-    background: url(../images/arrows-48-48-3.png) no-repeat -4px -51px;
+    width: 45px;
+    height: 45px;
+    background: url(../images/arrows-48-48-3.png) no-repeat -2px -50px;
     position: absolute;
     z-index: 99;
-    top: 91px;
-    left: 0;
+    top: 181px;
+    left: 1px;
     cursor: pointer;
     transition: all 0.2s;
+    opacity: 0.3;
 }
 
 .right {
-    width: 42px;
-    height: 42px;
-    background: url(../images/arrows-48-48-3.png) no-repeat -51px -51px;
+    width: 45px;
+    height: 45px;
+    background: url(../images/arrows-48-48-3.png) no-repeat -49px -49px;
     position: absolute;
     z-index: 99;
-    top: 91px;
-    right: 0;
+    top: 181px;
+    right: 1px;
     cursor: pointer;
     transition: all 0.2s;
+    opacity: 0.3;
 }
 
 .left:hover {
-    background-position: -4px -3px;
+    /*background-position: -2px -1px;*/
+    opacity: 1;
+    -webkit-transition: all .12s ease;
+    -moz-transition: all .12s ease;
+    transition: all .12s ease;
 }
 
 .right:hover {
-    background-position: -51px -3px;
+    /*background-position: -49px -1px;*/
+    opacity: 1;
+    -webkit-transition: all .12s ease;
+    -moz-transition: all .12s ease;
+    transition: all .12s ease;
 }
 
 /* 主要-左侧-爆料 */
@@ -1000,21 +1002,119 @@ textarea {
 }
 
 /* fruit */
+/**
+ * 纵向
+ * ------------------------------ */
+.scroll_vertical {
+    position: relative;
+    width: 262px;
+    height: 190px;
+    padding: 10px 5px;
+}
+
+.scroll_vertical .box {
+    overflow: hidden;
+    position: relative;
+    width: 262px;
+    height: 170px;
+    border-bottom: 1px dashed #ececec;
+}
+
+.scroll_vertical img {
+    float: left;
+    width: 65px;
+    height: 65px;
+}
+
+.scroll_vertical .list {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.scroll_vertical li p {
+    margin-top: -2px;
+    margin-left: 10px;
+    text-align: left;
+    float: left;
+    width: 175px;
+}
+
+.scroll_vertical li span {
+    float: left;
+    margin-left: 10px;
+    font-size: 22px;
+    color: #e8284c;
+}
+
+.scroll_vertical span strong {
+    font-size: 12px;
+}
+
+.scroll_vertical li span del {
+    color: #999999;
+    margin-left: 5px;
+    font-size: 14px;
+
+}
+
+.scroll_vertical .list li {
+    overflow: hidden;
+
+    width: 262px;
+    height: 90px;
+    text-align: center;
+}
+
+.scroll_vertical .next {
+    position: absolute;
+    left: 130px;
+    width: 17px;
+    height: 11px;
+    cursor: pointer;
+    bottom: 8px;
+    background: url(../images/arrowdown3.png);
+}
+
+.scroll_vertical .next {
+
+}
+
+.scroll_vertical .next:hover {
+
+}
+
 .fruit-sale {
+    height: 240px;
     margin-top: 10px;
 }
 
 .fruit-list {
+    position: relative;
+    width: 272px;
     height: 186px;
     overflow: hidden;
     border-bottom: 1px dashed #cccccc;
 }
 
-.fruit-list li {
-    margin: 12px 0 10px 0;
-    padding: 0 10px;
-    list-style: none;
+.fruit-info {
+    padding-top: 10px;
+    position: absolute;
+    height: 167px;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+}
 
+.fruit-list li {
+    height: 187px;
+    width: 272px;
+    list-style: none;
+}
+
+.fruit-list li div {
+    float: left;
+    margin: 5px 0;
 }
 
 .fruit-list li img {
@@ -1027,11 +1127,10 @@ textarea {
     margin-top: -2px;
     margin-left: 10px;
     float: left;
-    width: 164px;
+    width: 175px;
 }
 
 .fruit-list li span {
-
     margin-left: 10px;
     font-size: 22px;
     color: #e8284c;
@@ -1051,7 +1150,7 @@ textarea {
 .arrowdown3 {
     width: 17px;
     height: 11px;
-    margin: 6px auto 4px;
+    margin: 8px auto 4px;
     background: url(../images/arrowdown3.png);
     cursor: pointer;
 }
@@ -1281,6 +1380,7 @@ textarea {
     height: 25px;
     font-size: 18px;
     line-height: 25px;
+    font-weight: bold;
     padding: 10px 0;
     border-bottom: 1px dashed #ececec;
 }
@@ -1385,6 +1485,84 @@ textarea {
     overflow: hidden;
 }
 
+/**
+ * 焦点图 水平滚动
+ * ------------------------------ */
+.cxslide_x {
+    overflow: hidden;
+    position: relative;
+    width: 320px;
+    height: 200px;
+}
+
+.cxslide_x a {
+    color: #eee;
+    text-decoration: none;
+}
+
+.cxslide_x .box {
+    overflow: hidden;
+    position: relative;
+    width: 320px;
+    height: 200px;
+}
+
+.cxslide_x .list {
+    overflow: hidden;
+    width: 9999px;
+}
+
+.cxslide_x .list li {
+    float: left;
+    position: relative;
+    width: 320px;
+}
+
+.cxslide_x .list img {
+    vertical-align: top;
+}
+
+.cxslide_x .list p {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 30px;
+    color: #eee;
+    font: 14px/24px arial;
+    text-indent: 12px;
+    line-height: 30px;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.cxslide_x .btn {
+    overflow: hidden;
+    position: absolute;
+    bottom: 7px;
+    right: 6px;
+}
+
+.cxslide_x .btn li {
+    float: left;
+    width: 16px;
+    height: 16px;
+    margin: 0 0 0 10px;
+    border-radius: 3px;
+    background: #eee;
+    color: #666;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.cxslide_x .btn li.selected {
+    background: #e8284c;
+    color: #fff;
+}
+
+
+
 .floor-bgimage img {
     width: 320px;
     height: 200px;
@@ -1445,22 +1623,44 @@ textarea {
     overflow: hidden;
 }
 
-.imgshow-list ul {
-    margin: 0 14px;
-    width: 2000px;
+/**
+ * 横向滚动
+ * ------------------------------ */
+.scroll_horizontal {
+    position: relative;
+    width: 765px;
+    height: 129px;
+    padding: 4px 0;
 }
 
-.imgshow-list img {
-    width: 220px;
-    height: 130px;
+.scroll_horizontal .box {
+    overflow: hidden;
+    position: relative;
+    width: 705px;
+    height: 129px;
+    margin: 0 auto;
 }
 
-.imgshow-list li {
+.scroll_horizontal .list {
+    overflow: hidden;
+
+    width: 9999px;
+}
+
+.scroll_horizontal .list li {
     float: left;
-    margin: 0 13px;
+    height: 130px;
+    width: 220px;
+    padding-right: 22px;
 }
 
-.imgshow-list li a {
+.scroll_horizontal .list img {
+    height: 130px;
+    width: 220px;
+}
+
+.scroll_horizontal .list a {
+
     position: relative;;
     display: block;
 }
@@ -1478,52 +1678,200 @@ textarea {
 
 }
 
-.imgshow-arrow {
+.scroll_horizontal .prev,
+.scroll_horizontal .next {
     position: absolute;
-    z-index: -1;
-    top: 82px;
+    top: 55px;
+    width: 14px;
     height: 29px;
+    cursor: pointer;
+}
+
+.scroll_horizontal .prev {
+    left: 5px;
+    background: url(../images/arrowleft.png) no-repeat;
+}
+
+.scroll_horizontal .next {
+    right: 5px;
+    background: url(../images/arrowright.png) no-repeat;
+}
+
+/**
+ * 横向滚动2
+ * ------------------------------ */
+.scroll_horizontal2 {
+    position: relative;
+    width: 420px;
+    height: 180px;
+}
+
+.scroll_horizontal2 .box {
+    overflow: hidden;
+    position: relative;
+    width: 420px;
+    height: 180px;
+    margin: 0 auto;
+}
+
+.scroll_horizontal2 .list {
+    overflow: hidden;
+
+    width: 9999px;
+}
+
+.scroll_horizontal2 .list li {
+    float: left;
+    height: 180px;
+    width: 200px;
+    padding-right: 20px;
+    overflow: hidden;
+}
+
+.scroll_horizontal2 .list img {
+    float: left;
+    width: 200px;
+    height: 180px;
+}
+
+.scroll_horizontal2 .list a {
+    position: relative;;
+    display: block;
+}
+
+
+
+.scroll_horizontal2 .img-bg {
+    position: absolute;
+    width: 100%;
+    height: 30px;
+    top: 150px;
+    left: 0;
+    text-align: center;
+    line-height: 30px;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+
+}
+
+.scroll_horizontal2 .prev,
+.scroll_horizontal2 .next {
+    z-index: 1000;
+    position: absolute;
+    top: 65px;
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+    background: url(../images/arrows-48-48-3.png) no-repeat;
+}
+
+.scroll_horizontal2 .prev {
+    left: 5px;
+    background-position:  -2px -49px ;
+}
+
+.scroll_horizontal2 .next {
+    right: 5px;
+    background-position:  -49px -49px ;
+}
+.scroll_horizontal2 .prev:hover {
+    left: 5px;
+    background-position:   -2px -3px; ;
+}
+
+.scroll_horizontal2 .next:hover {
+    right: 5px;
+    background-position: -49px -3px;
+}
+
+/*  横向滚动3  */
+.scroll_horizontal3 {
+    position: relative;
     width: 765px;
+    height: 210px;
 }
 
-.arrow-left2 {
+.scroll_horizontal3 .box {
+    overflow: hidden;
+    position: relative;
+    width: 725px;
+    height: 210px;
+    margin: 0 auto;
+}
+
+.scroll_horizontal3 .list {
+    overflow: hidden;
+    width: 9999px;
+}
+
+.scroll_horizontal3 .list li {
+    float: left;
+    height: 210px;
+    width: 163px;
+    padding-right: 24px;
+    overflow: hidden;
+}
+
+.scroll_horizontal3 .list img {
+    float: left;
+    width: 163px;
+    height: 210px;
+
+    border-radius: 5px;
+}
+
+.scroll_horizontal3 .list a {
+    position: relative;;
+    display: block;
+}
+
+
+
+.scroll_horizontal3 .img-bg {
     position: absolute;
-    top: 82px;
+    width: 100%;
+    height: 30px;
+    top: 150px;
+    left: 0;
+    text-align: center;
+    line-height: 30px;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+
+}
+
+.scroll_horizontal3 .prev,
+.scroll_horizontal3 .next {
+    z-index: 1000;
+    position: absolute;
+    top: 78px;
+    width: 45px;
+    height: 45px;
     cursor: pointer;
-    width: 21px;
-    height: 42px;
-    background: url(../images/arrowleft2.png);
+    background: url(../images/arrows-48-48-3.png) no-repeat;
 }
 
-.arrow-left {
-    position: absolute;
-    top: 82px;
-    cursor: pointer;
-    width: 14px;
-    height: 29px;
-    background: url(../images/arrowleft.png);
+.scroll_horizontal3 .prev {
+    left: 0;
+    background-position:  -2px -49px ;
 }
 
-.arrow-right2 {
-    position: absolute;
-    top: 82px;
+.scroll_horizontal3 .next {
     right: 0;
-    cursor: pointer;
-    width: 21px;
-    height: 42px;
-    background: url(../images/arrowright2.png);
+    background-position:  -49px -49px ;
+}
+.scroll_horizontal3 .prev:hover {
+    left: 0;
+    background-position:   -2px -3px; ;
 }
 
-.arrow-right {
-    position: absolute;
-    top: 82px;
+.scroll_horizontal3 .next:hover {
     right: 0;
-    cursor: pointer;
-    width: 14px;
-    height: 29px;
-    background: url(../images/arrowright.png);
+    background-position: -49px -3px;
 }
 
+
+/*轮播到此结束 */
 /* 房产右侧内容 */
 .floor-pane2 {
     margin-left: 25px;
@@ -1766,27 +2114,6 @@ textarea {
     overflow: hidden;
 }
 
-.recfd-list ul {
-    width: 1000px;
-}
-
-.recfd-list li {
-    float: left;
-    height: 178px;
-    margin-right: 10px;
-    text-align: center;
-    border: 1px solid #ececec;
-}
-
-.recfd-list li a {
-    color: #666666;
-}
-
-.recfd-list img {
-    display: block;
-    height: 155px;
-    width: 131px;
-}
 
 .food .imgshow-title h3 {
     font-size: 18px;

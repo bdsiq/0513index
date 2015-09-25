@@ -2,6 +2,10 @@
  * Created by gud on 15/9/21.
  */
 $(function () {
+    pingyimove(".left_1", ".right_1", ".pic", ".dian", ".box");
+    xialapingyi(".fruit-info","#down_arrow");
+})
+$(function () {
     //顶部—下拉菜单
     var $obj = $('.menu-select');
     var menu = $('.app-list');
@@ -18,7 +22,6 @@ $(function () {
         $(this).removeClass('menu-hover');
         menu.hide();
     });
-
 });
 $(function () {
     //顶部—下拉菜单
@@ -32,7 +35,6 @@ $(function () {
         clearTimeout(timer1);
         $(this).removeClass('nhbg');
     });
-
 });
 //图片平移轮播开始
 function pingyimove(btn1,btn2,box,mos,parent){
@@ -44,7 +46,7 @@ function pingyimove(btn1,btn2,box,mos,parent){
     $(box).css('width',''+ulWidth+'px');
     $(mos).children().mouseover(function(){
         $(this).addClass('current').siblings().removeClass('current');
-        $(this).closest(parent).find(box).stop().animate({'left':''+$(this).index()*-liWidth+'px'},500);
+        $(this).closest(parent).find(box).stop().animate({'left':''+$(this).index()*-liWidth+'px'},600);
     })
     $(btn1).click(function(){
         move+=liWidth;
@@ -53,7 +55,7 @@ function pingyimove(btn1,btn2,box,mos,parent){
             num=liShu-1;
             move=-(ulWidth-liWidth);
         }
-        $(this).closest(parent).find(box).stop().animate({'left':''+move+'px'},500);
+        $(this).closest(parent).find(box).stop().animate({'left':''+move+'px'},250,"linear");
         $(this).closest(parent).find(mos).children().eq(num).addClass('current').siblings().removeClass('current');
     })
     $(btn2).click(function(){
@@ -63,34 +65,27 @@ function pingyimove(btn1,btn2,box,mos,parent){
             move=0;
             num=0;
         }
-        $(this).closest(parent).find(box).stop().animate({'left':''+move+'px'},500);
+        $(this).closest(parent).find(box).stop().animate({'left':''+move+'px'},250,"linear");
         $(this).closest(parent).find(mos).children().eq(num).addClass('current').siblings().removeClass('current');
     })
 }
 //图片平移轮播结束
-//单步平移展示效果开始
-function Move(btn1,btn2,box,btnparent,shu){
-    var llishu=$(box).first().children().length
-    var liwidth=$(box).children().width();
-    var boxwidth=llishu*liwidth;
-    var shuliang=llishu-shu;
-    $(box).css('width',''+boxwidth+'px');
+function xialapingyi(box,btn1){
+    var liShu=$(box).first().children().length;
+    var liHeight=$(box).children().height();
+    var ulHeight=liHeight*liShu;
     var num=0;
+    var move=0;
+    $(box).css('height',''+ulHeight+'px');
     $(btn1).click(function(){
-        num++;
-        if (num>shuliang) {
-            num=shuliang;
-        }
-        var move=-liwidth*num;
-        $(this).closest(btnparent).find(box).stop().animate({'left':''+move+'px'},500);
-    });
-    $(btn2).click(function(){
+
+        move+=liHeight;
         num--;
-        if (num<0) {
-            num=0;
+        if(num<0){
+            num=liShu-1;
+            move=-(ulHeight-liHeight);
         }
-        var move=liwidth*num;
-        $(this).closest(btnparent).find(box).stop().animate({'left':''+-move+'px'},500);
+        $(box).stop().animate({'top':''+move+'px'},450,"linear");
     })
 }
 
