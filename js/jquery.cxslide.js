@@ -250,7 +250,7 @@
 
           self.dom.box.stop(true, false).animate({
             'scrollLeft': _moveVal
-          }, self.settings.speed);
+          }, self.settings.speed, self.settings.easing);
           break;
 
         // 垂直滚动
@@ -291,6 +291,7 @@
     events: 'click',  // 按钮事件
     type: 'x',        // 过渡效果
     start: 0,         // 开始展示序号
+    easing: 'easeInOutQuart',      // 缓动方式
     speed: 800,       // 切换速度
     time: 5000,       // 自动轮换间隔时间
     auto: true,       // 是否自动轮播
