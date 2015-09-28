@@ -126,7 +126,7 @@ textarea {
     color: #e8284c;
 }
 
-/* ���*/
+/* ad */
 .ad1 img {
     float: left;
     width: 272px;
@@ -455,7 +455,7 @@ textarea {
     right: 8px;
     width: 11px;
     height: 7px;
-    background: url(../images/arrow2.png)
+    background: url(../images/arrow2.png);
 }
 
 .search-box-input {
@@ -468,7 +468,13 @@ textarea {
 .search-button {
     width: 75px;
     height: 38px;
-    background: url(../images/index013_17_03.png)
+    background-image: url(../images/search.png);
+    background-color: #2799e1;
+    cursor: pointer;
+}
+
+.search-button:hover {
+    background-color: #2f8dc8;
 }
 
 /* nav */
@@ -518,8 +524,6 @@ textarea {
 }
 
 .tab_holder .phone {
-    /*padding-left: 40px;*/
-
 }
 
 .tab_holder .phone a {
@@ -639,19 +643,19 @@ textarea {
 
 }
 
-/* ��Ҫ */
+/* main model */
 .main {
     margin-top: 20px;
 }
 
-/* ��Ҫ-��� */
+/* main-grid-left */
 .main-grid1 {
     width: 320px;
     overflow: hidden;
 
 }
 
-/* ��Ҫ-���-ͼƬ��� */
+/* ???-???-????? */
 .main-slider {
     height: 440px;
 }
@@ -663,7 +667,7 @@ textarea {
 }
 
 /**
- * ����ͼ ˮƽ����
+ * ad image
  * ------------------------------ */
 
 .banner {
@@ -695,7 +699,6 @@ textarea {
     overflow: hidden;
     width: 9999px;
 }
-
 
 .banner .cxslide_x .list li {
     float: left;
@@ -780,8 +783,7 @@ textarea {
     background-position: -48px -50px;
 }
 
-
-/* ��Ҫ-���-���� */
+/* baoliao */
 .baoliao {
     height: 356px;
 }
@@ -896,14 +898,10 @@ textarea {
     border-radius: 3px;
 }
 
-/* ͷ����Ҫ�����м� */
+/* main-grid2 */
 .main-grid2 {
     margin-left: 25px;
     width: 420px;
-}
-
-.top-news {
-
 }
 
 .top-news .news-list {
@@ -957,7 +955,7 @@ textarea {
     border: 1px solid #cccccc;
 }
 
-/* ͷ����Ҫ�����Ҳ� */
+/* main-grid3 */
 .main-grid3 {
     margin-left: 25px;
     width: 272px;
@@ -1025,7 +1023,7 @@ textarea {
 
 /* fruit */
 /**
- * ����
+ * scroll_vertical
  * ------------------------------ */
 .scroll_vertical {
     position: relative;
@@ -1082,7 +1080,6 @@ textarea {
 
 .scroll_vertical .list li {
     overflow: hidden;
-
     width: 262px;
     height: 90px;
     text-align: center;
@@ -1096,14 +1093,6 @@ textarea {
     cursor: pointer;
     bottom: 8px;
     background: url(../images/arrowdown3.png);
-}
-
-.scroll_vertical .next {
-
-}
-
-.scroll_vertical .next:hover {
-
 }
 
 .fruit-sale {
@@ -1211,7 +1200,7 @@ textarea {
     overflow: hidden;
 }
 
-/*  �罻 */
+/*  ?? */
 .social-list li {
     width: 68px;
     float: left;
@@ -1332,7 +1321,7 @@ textarea {
 
 }
 
-/* � */
+/* ?? */
 .activity {
     margin-bottom: 20px;
 }
@@ -1379,16 +1368,12 @@ textarea {
     margin-left: 130px;
 }
 
-/* ��������� */
+/* activity-content */
 
 .activity-content {
     padding: 0 30px;
     border: 1px solid #ececec;
     overflow: hidden;
-}
-
-.content-house {
-
 }
 
 .content-pane1 {
@@ -1492,23 +1477,8 @@ textarea {
     height: 135px;
 }
 
-/* ���� */
-.buidings {
-    overflow: hidden;
-}
-
-.floor-pane1 {
-    margin-top: 3px;
-    width: 765px;
-}
-
-.floor-bgimage {
-    float: left;
-    overflow: hidden;
-}
-
 /**
- * ����ͼ ˮƽ����
+ *cxslide_x
  * ------------------------------ */
 .cxslide_x {
     overflow: hidden;
@@ -1586,68 +1556,10 @@ textarea {
     color: #fff;
 }
 
-/*.floor-bgimage img {*/
-    /*width: 320px;*/
-    /*height: 200px;*/
-/*}*/
-
-.floor-news {
-    width: 420px;
-    height: 200px;
-    float: left;
-    margin-left: 25px;
-}
-
-.floor-news p {
-    height: 40px;
-    margin-bottom: 10px;
-    padding: 5px;
-    font-size: 14px;
-    color: #666;
-    overflow: hidden;
-}
-
-.news-title {
-    margin-top: 3px;
-    text-align: center;
-    font-size: 22px;
-}
-
-.news-title a {
-    color: #2799e1;
-}
-
-.news-title a:hover {
-    text-decoration: underline;
-}
-
-.floor-imgshow {
-    position: relative;
-    width: 765px;
-    float: left;
-    margin-top: 10px;
-
-    overflow: hidden;
-}
-
-.imgshow-title {
-    overflow: hidden;
-}
-
-.imgshow-title h3 {
-    float: left;
-    font-size: 16px;
-}
-
-.imgshow-list {
-    width: 765px;
-    height: 125px;
-    padding: 5px 0;
-    overflow: hidden;
-}
+/* cxslide_x end */
 
 /**
- * �������
+ * scroll_horizontal
  * ------------------------------ */
 .scroll_horizontal {
     position: relative;
@@ -1704,196 +1616,229 @@ textarea {
 
 .scroll_horizontal .prev,
 .scroll_horizontal .next {
+    z-index: 1000;
     position: absolute;
-    top: 55px;
-    width: 14px;
-    height: 29px;
+    top: 47px;
+    width: 45px;
+    height: 45px;
     cursor: pointer;
+    background: url(../images/arrows-48-48-3.png) no-repeat;
 }
 
 .scroll_horizontal .prev {
-    left: 5px;
-    background: url(../images/arrowleft.png) no-repeat;
+    left: 0;
+    background-position: -2px -49px;
 }
 
 .scroll_horizontal .next {
-    right: 5px;
-    background: url(../images/arrowright.png) no-repeat;
+    right: 0;
+    background-position: -49px -49px;
 }
+/*.recfd-list .scroll_horizontal .prev,*/
+/*.recfd-list .scroll_horizontal .next {*/
+
+    /*position: absolute;*/
+    /*top: 65px;*/
+    /*width: 45px;*/
+    /*height: 45px;*/
+    /*background: url(../images/arrows-48-48-3.png) no-repeat;*/
+/*}*/
+
+/*.recfd-list .scroll_horizontal .prev {*/
+    /*background-position: -2px -49px;*/
+/*}*/
+
+/*.recfd-list .scroll_horizontal .next {*/
+    /*background-position: -49px -49px;*/
+/*}*/
+
+ .scroll_horizontal .prev:hover {
+    background-position: -2px -3px;;
+}
+
+ .scroll_horizontal .next:hover {
+    background-position: -49px -3px;
+}
+
+/* scroll_horizontal end */
 
 /**
- * �������2
+ * recfd-list scroll_horizontal
  * ------------------------------ */
-.scroll_horizontal2 {
-    position: relative;
+.recfd-list .scroll_horizontal {
+    padding: 0;
     width: 420px;
     height: 180px;
 }
 
-.scroll_horizontal2 .box {
-    overflow: hidden;
-    position: relative;
+.recfd-list .scroll_horizontal .box {
     width: 420px;
     height: 180px;
-    margin: 0 auto;
 }
 
-.scroll_horizontal2 .list {
-    overflow: hidden;
-
-    width: 9999px;
-}
-
-.scroll_horizontal2 .list li {
-    float: left;
+.recfd-list .scroll_horizontal .list li {
     height: 180px;
     width: 200px;
     padding-right: 20px;
-    overflow: hidden;
 }
 
-.scroll_horizontal2 .list img {
-    float: left;
+.recfd-list .scroll_horizontal .list img {
     width: 200px;
     height: 180px;
 }
 
-.scroll_horizontal2 .list a {
-    position: relative;;
-    display: block;
-}
-
-.scroll_horizontal2 .img-bg {
-    position: absolute;
-    width: 100%;
-    height: 30px;
+.recfd-list .scroll_horizontal .img-bg {
     top: 150px;
-    left: 0;
-    text-align: center;
-    line-height: 30px;
-    background-color: rgba(0, 0, 0, 0.4);
-    color: white;
-
 }
 
-.scroll_horizontal2 .prev,
-.scroll_horizontal2 .next {
+.recfd-list .scroll_horizontal .prev,
+.recfd-list .scroll_horizontal .next {
     z-index: 1000;
     position: absolute;
     top: 65px;
     width: 45px;
     height: 45px;
-    cursor: pointer;
     background: url(../images/arrows-48-48-3.png) no-repeat;
 }
 
-.scroll_horizontal2 .prev {
-    left: 5px;
+.recfd-list .scroll_horizontal .prev {
     background-position: -2px -49px;
 }
 
-.scroll_horizontal2 .next {
-    right: 5px;
+.recfd-list .scroll_horizontal .next {
     background-position: -49px -49px;
 }
 
-.scroll_horizontal2 .prev:hover {
-    left: 5px;
+.recfd-list .scroll_horizontal .prev:hover {
     background-position: -2px -3px;;
 }
 
-.scroll_horizontal2 .next:hover {
-    right: 5px;
+.recfd-list .scroll_horizontal .next:hover {
     background-position: -49px -3px;
 }
 
-/*  �������3  */
-.scroll_horizontal3 {
-    position: relative;
-    width: 765px;
+/* recfd-list scroll_horizontal end */
+
+/*  sheying scroll_horizontal   */
+.sheying .scroll_horizontal {
     height: 210px;
 }
 
-.scroll_horizontal3 .box {
-    overflow: hidden;
-    position: relative;
+.sheying .scroll_horizontal .box {
     width: 725px;
     height: 210px;
-    margin: 0 auto;
 }
 
-.scroll_horizontal3 .list {
-    overflow: hidden;
-    width: 9999px;
-}
-
-.scroll_horizontal3 .list li {
-    float: left;
+.sheying .scroll_horizontal .list li {
     height: 210px;
     width: 163px;
     padding-right: 24px;
-    overflow: hidden;
 }
 
-.scroll_horizontal3 .list img {
-    float: left;
+.sheying .scroll_horizontal .list img {
     width: 163px;
     height: 210px;
-
     border-radius: 5px;
 }
 
-.scroll_horizontal3 .list a {
-    position: relative;;
-    display: block;
-}
-
-.scroll_horizontal3 .img-bg {
-    position: absolute;
-    width: 100%;
-    height: 30px;
-    top: 150px;
-    left: 0;
-    text-align: center;
-    line-height: 30px;
-    background-color: rgba(0, 0, 0, 0.4);
-    color: white;
-
-}
-
-.scroll_horizontal3 .prev,
-.scroll_horizontal3 .next {
+.sheying .scroll_horizontal .prev,
+.sheying .scroll_horizontal .next {
     z-index: 1000;
-    position: absolute;
-    top: 78px;
+    top: 80px;
     width: 45px;
     height: 45px;
-    cursor: pointer;
     background: url(../images/arrows-48-48-3.png) no-repeat;
 }
 
-.scroll_horizontal3 .prev {
+.sheying .scroll_horizontal .prev {
     left: 0;
     background-position: -2px -49px;
 }
 
-.scroll_horizontal3 .next {
+.sheying .scroll_horizontal .next {
     right: 0;
     background-position: -49px -49px;
 }
 
-.scroll_horizontal3 .prev:hover {
+.sheying .scroll_horizontal .prev:hover {
     left: 0;
     background-position: -2px -3px;;
 }
 
-.scroll_horizontal3 .next:hover {
+.sheying .scroll_horizontal .next:hover {
     right: 0;
     background-position: -49px -3px;
 }
 
-/*�ֲ����˽��� */
-/* �����Ҳ����� */
+/* sheying scroll_horizontal end*/
+
+/* floor */
+
+.floor-pane1 {
+    margin-top: 3px;
+    width: 765px;
+}
+
+.floor-bgimage {
+    float: left;
+    overflow: hidden;
+}
+
+.floor-news {
+    width: 420px;
+    height: 200px;
+    float: left;
+    margin-left: 25px;
+}
+
+.floor-news p {
+    height: 40px;
+    margin-bottom: 10px;
+    padding: 5px;
+    font-size: 14px;
+    color: #666;
+    overflow: hidden;
+}
+
+.news-title {
+    margin-top: 3px;
+    text-align: center;
+    font-size: 22px;
+}
+
+.news-title a {
+    color: #2799e1;
+}
+
+.news-title a:hover {
+    text-decoration: underline;
+}
+
+.floor-imgshow {
+    position: relative;
+    width: 765px;
+    float: left;
+    margin-top: 10px;
+
+    overflow: hidden;
+}
+
+.imgshow-title {
+    overflow: hidden;
+}
+
+.imgshow-title h3 {
+    float: left;
+    font-size: 16px;
+}
+
+.imgshow-list {
+    width: 765px;
+    height: 125px;
+    padding: 5px 0;
+    overflow: hidden;
+}
+
 .floor-pane2 {
     margin-left: 25px;
     width: 272px;
@@ -1904,8 +1849,9 @@ textarea {
     color: #e8284c;
 }
 
-.kanfang {
-
+/* buidings */
+.buidings {
+    overflow: hidden;
 }
 
 .kanfang i {
@@ -1936,6 +1882,8 @@ textarea {
     color: #999;
     overflow: hidden;
 }
+
+/* cars */
 
 .cars {
     margin-top: 20px;
@@ -1994,7 +1942,7 @@ textarea {
     border-radius: 5px;
 }
 
-/* �Ҿ�װ�� */
+/* home  */
 .home {
     margin-top: 20px;
     overflow: hidden;
@@ -2084,6 +2032,7 @@ textarea {
     background: none;
 }
 
+/* notice */
 .notice {
     float: left;
     margin: 3px;
@@ -2110,7 +2059,9 @@ textarea {
     color: #f3a528;
 }
 
-/* ��ʳ */
+/* notice end  */
+
+/* food  */
 
 .food {
     margin-top: 20px;
@@ -2177,7 +2128,7 @@ textarea {
     background: url(../images/mfbm.png);
 }
 
-/* ��� */
+/* marriage */
 .marriage {
     margin-top: 20px;
 }
@@ -2229,7 +2180,7 @@ textarea {
     border-bottom: none;
 }
 
-/* ��Ӱ */
+/* hotphoto */
 
 .hotphoto {
     margin: 20px 0;
@@ -2297,19 +2248,19 @@ textarea {
 
     border: 1px solid #ffffff;
     width: 228px;
-    height: 255px;
+    height: 174px;
 }
 
 .hotphoto .image-show .image4 .image1-1 img {
 
-    height: 174px;
+    height: 255px;
 }
 
 .hotphoto .image-show .image1 .image1-1 img, .hotphoto .image-show .image2 .image1-1 img, .hotphoto .image-show .image3 .image1-1 img, .hotphoto .image-show .image4 .image1-1 img {
     border-bottom: none;
 }
 
-/* �ײ� */
+/* ??? */
 
 .footer {
     font-size: 12px;
