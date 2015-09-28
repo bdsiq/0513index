@@ -1,6 +1,7 @@
 /**
  * Created by gud on 15/9/21.
  */
+<<<<<<< Updated upstream
 $(function () {
     pingyimove(".left_1", ".right_1", ".pic", ".dian", ".box");
     xialapingyi(".fruit-info","#down_arrow");
@@ -9,6 +10,11 @@ $(function () {
     //顶部—下拉菜单
     var $obj = $('.menu-select');
     var menu = $('.app-list');
+=======
+$(function(){
+    var $obj = $('.toptar-nav').find('.menu-select');
+    var menu =  $('.toptar-nav').find('.app-list');
+>>>>>>> Stashed changes
 
     $obj.hover(function () {
         var obj = $(this);

@@ -312,10 +312,10 @@
   // 默认值
   $.cxScroll.defaults = {
     direction: 'right',   // 滚动方向
-    easing: 'swing',      // 缓动方式
-    step: 1,              // 滚动步长
-    accel: 200,           // 手动滚动速度
-    speed: 800,           // 自动滚动速度
+    easing: 'easeOutCirc',      // 缓动方式
+    step: 2,              // 滚动步长
+    accel: 800,           // 手动滚动速度
+    speed: 1200,           // 自动滚动速度
     time: 4000,           // 自动滚动间隔时间
     auto: true,           // 是否自动滚动
     hoverLock: true,      // 鼠标移入移出锁定
